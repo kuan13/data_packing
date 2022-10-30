@@ -4,8 +4,11 @@ import Tabs from 'react-bootstrap/Tabs';
 import BasicExample from './table';
 import Charts from './charts'
 
+
 const UncontrolledExample = () => {
   return (
+    <div>
+    <h1>KLA資料打包</h1>  
     <Tabs
       defaultActiveKey="profile"
       id="uncontrolled-tab-example"
@@ -25,6 +28,7 @@ const UncontrolledExample = () => {
         <BasicExample />
       </Tab>
     </Tabs>
+    </div>
   );
 }
 

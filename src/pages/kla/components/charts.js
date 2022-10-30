@@ -1,4 +1,3 @@
-import React from 'react';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 
@@ -18,11 +17,11 @@ const options = {
 
 
 const Charts = () => {
- 
-    return (
-      <div>
+    return (   
+    <div>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
+
     );
 
 };
