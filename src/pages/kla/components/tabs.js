@@ -3,9 +3,20 @@ import Tabs from 'react-bootstrap/Tabs';
 
 import BasicExample from './table';
 import Charts from './charts'
-
+import data from '../waferdata.json'
+import { Box, VStack, Center, Button } from '@chakra-ui/react'
+import Wafermap from './wafermap'
+import React, { useState, useEffect } from 'react';
 
 const UncontrolledExample = () => {
+  const [waferIdx, setWaferIdx] = useState(0)
+  var dimensions = {'width': 400, 'height': 400}
+
+  function nextWafer() {
+    waferIdx === (data.length - 1) ?
+      setWaferIdx(0) : setWaferIdx(waferIdx + 1)
+  }
+
   return (
     <div>
     <h1>KLA資料打包</h1>  
@@ -16,10 +27,19 @@ const UncontrolledExample = () => {
     >
       <Tab eventKey="tab1" title="主頁">
         <BasicExample />
-        <Charts />
       </Tab>
       <Tab eventKey="tab2" title="wafermap">
-        <BasicExample />
+        <Box>
+        <Center>
+          <VStack>
+            <Wafermap
+              points={data[waferIdx].points}
+              configuration={dimensions}
+            />
+            <Button onClick={nextWafer}>Next wafer</Button>
+          </VStack>
+        </Center>
+      </Box> 
       </Tab>
       <Tab eventKey="tab4" title="test">
         <Charts />

@@ -1,8 +1,6 @@
 import UncontrolledExample from "./components/tabs"
 import { useSearchParams } from "react-router-dom";
-import React, { useEffect } from 'react';
-
-
+import React, { useState, useEffect } from 'react';
 
 function Kla() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -13,7 +11,7 @@ function Kla() {
   return (
     <div className="kla">
       <h2>Order NO: {orderno}</h2>
-      <UncontrolledExample/>
+      <UncontrolledExample/>    
     </div>
   );
 }

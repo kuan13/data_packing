@@ -4,10 +4,13 @@
   "private": true,
   "proxy": "http://127.0.0.1:8000/",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.11",
+    "@chakra-ui/react": "^2.3.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
+    "d3": "^7.6.1",
     "highcharts": "^10.2.1",
     "highcharts-react-official": "^3.1.0",
     "react": "^18.2.0",
@@ -16,6 +19,7 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "sonnet": "^0.0.1",
+    "wafer-map": "^4.0.39",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
